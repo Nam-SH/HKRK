@@ -13,39 +13,40 @@ def plot_nmf_illustration():
     # Add 8 to make sure every point lies in the positive part of the space
     X_blob = np.dot(X_, rnd.normal(size=(2, 2))) + rnd.normal(size=2) + 8
 
-    nmf = NMF(random_state=0, n_components=2)
+    nmf = NMF(random_state=0)
     nmf.fit(X_blob)
     X_nmf = nmf.transform(X_blob)
 
     fig, axes = plt.subplots(1, 2, figsize=(15, 5))
 
-    axes[0].set_xlim([0, 12])
-    axes[0].set_ylim([0, 12])
-    axes[0].scatter(X_blob[:, 0], X_blob[:, 1], c=X_nmf[:, 0], linewidths=0, s=60, cmap='viridis')
-    axes[0].set_xlabel("특성 1")
-    axes[0].set_ylabel("특성 2")
+    axes[0].scatter(X_blob[:, 0], X_blob[:, 1], c=X_nmf[:, 0], linewidths=0,
+                    s=60, cmap='viridis')
+    axes[0].set_xlabel("feature 1")
+    axes[0].set_ylabel("feature 2")
+    axes[0].set_xlim(0, 12)
+    axes[0].set_ylim(0, 12)
     axes[0].arrow(0, 0, nmf.components_[0, 0], nmf.components_[0, 1], width=.1,
                   head_width=.3, color='k')
     axes[0].arrow(0, 0, nmf.components_[1, 0], nmf.components_[1, 1], width=.1,
                   head_width=.3, color='k')
     axes[0].set_aspect('equal')
-    axes[0].set_title("성분이 2개인 NMF")
+    axes[0].set_title("NMF with two components")
 
     # second plot
     nmf = NMF(random_state=0, n_components=1)
     nmf.fit(X_blob)
 
-    axes[1].set_xlim([0, 12])
-    axes[1].set_ylim([0, 12])
     axes[1].scatter(X_blob[:, 0], X_blob[:, 1], c=X_nmf[:, 0], linewidths=0,
                     s=60, cmap='viridis')
-    axes[1].set_xlabel("특성 1")
-    axes[1].set_ylabel("특성 2")
+    axes[1].set_xlabel("feature 1")
+    axes[1].set_ylabel("feature 2")
+    axes[1].set_xlim(0, 12)
+    axes[1].set_ylim(0, 12)
     axes[1].arrow(0, 0, nmf.components_[0, 0], nmf.components_[0, 1], width=.1,
                   head_width=.3, color='k')
 
     axes[1].set_aspect('equal')
-    axes[1].set_title("성분이 1개인 NMF")
+    axes[1].set_title("NMF with one component")
 
 
 @memory.cache
@@ -81,6 +82,6 @@ def plot_nmf_faces(X_train, X_test, image_shape):
             a.imshow(X_test_back[i].reshape(image_shape), vmin=0, vmax=1)
 
     # label the top row
-    axes[0, 0].set_title("원본 이미지")
+    axes[0, 0].set_title("original image")
     for ax, n_components in zip(axes[0, 1:], [10, 50, 100, 500]):
-        ax.set_title("성분 %d개" % n_components)
+        ax.set_title("%d components" % n_components)

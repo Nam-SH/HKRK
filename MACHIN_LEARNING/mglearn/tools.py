@@ -51,8 +51,8 @@ def visualize_coefficients(coefficients, feature_names, n_top_features=25):
     plt.xticks(np.arange(1, 1 + 2 * n_top_features),
                feature_names[interesting_coefficients], rotation=60,
                ha="right")
-    plt.ylabel("계수 크기")
-    plt.xlabel("특성")
+    plt.ylabel("Coefficient magnitude")
+    plt.xlabel("Feature")
 
 
 def heatmap(values, xlabel, ylabel, xticklabels, yticklabels, cmap=None,

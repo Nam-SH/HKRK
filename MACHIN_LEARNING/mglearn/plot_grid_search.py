@@ -37,10 +37,10 @@ def plot_cross_val_selection():
     plt.xticks(range(len(results)), [str(x).strip("{}").replace("'", "") for x
                                      in grid_search.cv_results_['params']],
                rotation=90)
-    plt.ylabel("정확도")
-    plt.xlabel("매개변수 세팅")
+    plt.ylabel("Validation accuracy")
+    plt.xlabel("Parameter settings")
     plt.legend([marker_cv, marker_mean, marker_best],
-               ["교차 검증 정확도", "평균 정확도", "최적 매개변수 설정"],
+               ["cv accuracy", "mean accuracy", "best parameter setting"],
                loc=(1.05, .4))
 
 
@@ -70,24 +70,24 @@ def plot_grid_search_overview():
         plt.draw()
         return annotation
 
-    step = 200
-    grr = 600
+    step = 100
+    grr = 400
 
-    final_evaluation = draw(axes, "최종 평가", (5 * step, grr - 3 *
+    final_evaluation = draw(axes, "final evaluation", (5 * step, grr - 3 *
                                                        step))
-    retrained_model = draw(axes, "최종 모델 학습", (3 * step, grr - 3 * step),
+    retrained_model = draw(axes, "retrained model", (3 * step, grr - 3 * step),
                            final_evaluation)
-    best_parameters = draw(axes, "최적 매개변수", (.5 * step, grr - 3 *
+    best_parameters = draw(axes, "best parameters", (.5 * step, grr - 3 *
                                                      step), retrained_model)
-    cross_validation = draw(axes, "교차 검증", (.5 * step, grr - 2 *
+    cross_validation = draw(axes, "cross-validation", (.5 * step, grr - 2 *
                                                        step), best_parameters)
-    draw(axes, "매개변수 그리드", (0.0, grr - 0), cross_validation)
-    training_data = draw(axes, "훈련 데이터", (2 * step, grr - step),
+    draw(axes, "parameter grid", (0.0, grr - 0), cross_validation)
+    training_data = draw(axes, "training data", (2 * step, grr - step),
                          cross_validation)
-    draw(axes, "훈련 데이터", (2 * step, grr - step), retrained_model)
-    test_data = draw(axes, "테스트 데이터", (5 * step, grr - step),
+    draw(axes, "training data", (2 * step, grr - step), retrained_model)
+    test_data = draw(axes, "test data", (5 * step, grr - step),
                      final_evaluation)
-    draw(axes, "데이터 세트", (3.5 * step, grr - 0.0), training_data)
-    draw(axes, "데이터 세트", (3.5 * step, grr - 0.0), test_data)
+    draw(axes, "data set", (3.5 * step, grr - 0.0), training_data)
+    draw(axes, "data set", (3.5 * step, grr - 0.0), test_data)
     plt.ylim(0, 1)
     plt.xlim(0, 1.5)

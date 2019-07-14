@@ -13,20 +13,20 @@ def plot_scaling():
     plt.figure(figsize=(15, 8))
     main_ax = plt.subplot2grid((2, 4), (0, 0), rowspan=2, colspan=2)
 
-    main_ax.scatter(X[:, 0], X[:, 1], c=y, cmap=cm2, s=60, edgecolors='black')
+    main_ax.scatter(X[:, 0], X[:, 1], c=y, cmap=cm2, s=60)
     maxx = np.abs(X[:, 0]).max()
     maxy = np.abs(X[:, 1]).max()
 
     main_ax.set_xlim(-maxx + 1, maxx + 1)
     main_ax.set_ylim(-maxy + 1, maxy + 1)
-    main_ax.set_title("원본 데이터")
+    main_ax.set_title("Original Data")
     other_axes = [plt.subplot2grid((2, 4), (i, j))
                   for j in range(2, 4) for i in range(2)]
 
     for ax, scaler in zip(other_axes, [StandardScaler(), RobustScaler(),
                                        MinMaxScaler(), Normalizer(norm='l2')]):
         X_ = scaler.fit_transform(X)
-        ax.scatter(X_[:, 0], X_[:, 1], c=y, cmap=cm2, s=60, edgecolors='black')
+        ax.scatter(X_[:, 0], X_[:, 1], c=y, cmap=cm2, s=60)
         ax.set_xlim(-2, 2)
         ax.set_ylim(-2, 2)
         ax.set_title(type(scaler).__name__)

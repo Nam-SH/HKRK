@@ -24,7 +24,7 @@ def tree_image(tree, fout=None):
         x[0, 0] = 0
         return x
     dot_data = StringIO()
-    export_graphviz(tree, out_file=dot_data, max_depth=9, impurity=False)
+    export_graphviz(tree, out_file=dot_data, max_depth=3, impurity=False)
     data = dot_data.getvalue()
     data = re.sub(r"samples = [0-9]+\\n", "", data)
     data = re.sub(r"\\nsamples = [0-9]+", "", data)
@@ -39,12 +39,12 @@ def tree_image(tree, fout=None):
 
 def plot_tree_progressive():
     X, y = make_moons(n_samples=100, noise=0.25, random_state=3)
-    plt.figure(dpi=100)
+    plt.figure()
     ax = plt.gca()
     discrete_scatter(X[:, 0], X[:, 1], y, ax=ax)
-    ax.set_xlabel("특성 0")
-    ax.set_ylabel("특성 1")
-    plt.legend(["클래스 0", "클래스 1"], loc='best')
+    ax.set_xlabel("Feature 0")
+    ax.set_ylabel("Feature 1")
+    plt.legend(["Class 0", "Class 1"], loc='best')
 
     axes = []
     for i in range(3):
@@ -91,5 +91,5 @@ def plot_tree_partition(X, y, tree, ax=None):
 def plot_tree(X, y, max_depth=1, ax=None):
     tree = DecisionTreeClassifier(max_depth=max_depth, random_state=0).fit(X, y)
     ax = plot_tree_partition(X, y, tree, ax=ax)
-    ax.set_title("깊이 = %d" % max_depth)
+    ax.set_title("depth = %d" % max_depth)
     return tree
