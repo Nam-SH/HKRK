@@ -1,0 +1,35 @@
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: FCF0-A70E
+
+ C:\github\Mine\HKRK\10 Days of Javascript 디렉터리
+
+2020-05-16  오후 05:13    <DIR>          .
+2020-05-16  오후 05:13    <DIR>          ..
+2020-05-16  오후 04:59             1,723 Day 0 - Data Types.js
+2020-05-16  오후 04:59               509 Day 0 - Hello, World!.js
+2020-05-16  오후 05:00               643 Day 1 - Arithmetic Operators.js
+2020-05-16  오후 05:00               123 Day 1 - Functions.js
+2020-05-16  오후 05:01               295 Day 1 - Let and Const.js
+2020-05-16  오후 05:01               364 Day 2 - Conditional Statements If-Else.js
+2020-05-16  오후 05:06               408 Day 2 - Conditional Statements Switch.js
+2020-05-16  오후 05:06               209 Day 2 - Loops.js
+2020-05-16  오후 05:07               254 Day 3 - Arrays.js
+2020-05-16  오후 05:07               127 Day 3 - Throw.js
+2020-05-16  오후 05:07               223 Day 3 - Try, Catch, and Finally.js
+2020-05-16  오후 05:07               221 Day 4 - Classes.js
+2020-05-16  오후 05:07               147 Day 4 - Count Objects.js
+2020-05-16  오후 05:07               131 Day 4 - Create a Rectangle Object.js
+2020-05-16  오후 04:55                 0 Day 5 - Arrow Functions.js
+2020-05-16  오후 05:08               333 Day 5 - Inheritance.js
+2020-05-16  오후 05:08               545 Day 5 - Template Literals.js
+2020-05-16  오후 05:09               232 Day 6 - Bitwise Operators.js
+2020-05-16  오후 05:09               352 Day 6 - JavaScript Dates.js
+2020-05-16  오후 05:09               286 Day 7 - Regular Expressions I.js
+2020-05-16  오후 05:09               329 Day 7 - Regular Expressions II.js
+2020-05-16  오후 05:09               238 Day 7 - Regular Expressions III.js
+2020-05-16  오후 05:12    <DIR>          Day 8 - Buttons Container
+2020-05-16  오후 05:12    <DIR>          Day 8 - Create a Button
+2020-05-16  오후 05:12    <DIR>          Day 9 - Binary Calculator
+2020-05-16  오후 05:13                 0 test.txt
+              23개 파일               7,692 바이트
+               5개 디렉터리  359,503,237,120 바이트 남음

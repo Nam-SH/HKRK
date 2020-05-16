@@ -2,10 +2,20 @@
 
 # 0. 서론
 
-- Jul 9, 2019 ~ Aug 22, 2019
 - 문제의 저작권은 HackerRank에 있다.
 
-# 1. CODE_30
+# 1. 목차
+
+- Learn to code in 30 days
+- 10 Days of Statistics
+- 10 Days of Javascript
+- Sql
+- Interview Preparation Kit
+- Problem Solving
+
+# 2. 문제
+
+## 2-1. Learn to code in 30 days
 
 <hr>
 
@@ -40,7 +50,9 @@
 - Day 28: RegEx, Patterns, and Intro to valbases
 - Day 29: Bitwise AND
 
-# 2. STAT_10
+
+
+## 2-2. 10 Days of Statistics
 
 <hr>
 
@@ -72,9 +84,168 @@
 - Day 8: Pearson Correlation Coefficient II (Q & A)
 - Day 9: Multiple Linear Regression
 
-# 3. HKRK
+
+
+## 2-3. 10 Days of Javascript
 
 <hr>
+
+- Day 0 - Hello, World!
+
+- Day 0 - Data Types
+
+- Day 1 - Arithmetic Operators
+
+- Day 1 - Functions
+
+- Day 1 - Let and Const
+
+- Day 2 - Conditional Statements If-Else
+
+- Day 2 - Conditional Statements Switch
+
+- Day 2 - Loops
+
+- Day 3 - Arrays
+
+- Day 3 - Throw
+
+- Day 3 - Try, Catch, and Finally
+
+- Day 4 - Classes
+
+- Day 4 - Count Objects
+
+- Day 4 - Create a Rectangle Object
+
+- Day 5 - Arrow Functions
+
+- Day 5 - Inheritance
+
+- Day 5 - Template Literals
+
+- Day 6 - Bitwise Operators
+
+- Day 6 - JavaScript Dates
+
+- Day 7 - Regular Expressions I
+
+- Day 7 - Regular Expressions II
+
+- Day 7 - Regular Expressions III
+
+- Day 8 - Buttons Container
+
+- Day 8 - Create a Button
+
+- Day 9 - Binary Calculator
+
+
+
+## 2-4. Sql
+
+<hr>
+
+### Advanced Join
+
+- 15 Days of Learning SQL
+- Interviews
+- Placements
+- SQL Project Planning
+- Symmetric Pairs
+
+### Advanced Select
+
+- Binary Tree Nodes
+- New Companies
+- Occupations
+- The PADS
+- Type of Triangle
+
+### Aggregation
+
+- Average Population
+- Japan Population
+- Population Density Difference
+- Revising Aggregations - Averages
+- Revising Aggregations - The Count Function
+- Revising Aggregations - The Sum Function
+- The Blunder
+- Top Earners
+- Weather Observation Station 2
+- Weather Observation Station 13
+- Weather Observation Station 14
+- Weather Observation Station 15
+- Weather Observation Station 16
+- Weather Observation Station 17
+- Weather Observation Station 18
+- Weather Observation Station 19
+- Weather Observation Station 20
+
+### Alternative Queries
+
+- Draw The Triangle 1
+- Draw The Triangle 2
+- Print Prime Numbers
+
+### Basic Join
+
+- African Cities
+- Asian Population
+- Average Population of Each Continent
+- Challenges
+- Contest Leaderboard
+- Ollivander's Inventory
+- The Report
+- Top Competitors
+
+### Basic Select
+
+- Employee Names
+- Employee Salaries
+- Higher Than 75 Marks
+- Japanese Cities' Attributes
+- Japanese Cities' Names
+- Revising the Select Query I
+- Revising the Select Query II
+- Select All
+- Select By ID
+- Weather Observation Station 1
+- Weather Observation Station 3
+- Weather Observation Station 4
+- Weather Observation Station 5
+- Weather Observation Station 6
+- Weather Observation Station 7
+- Weather Observation Station 8
+- Weather Observation Station 9
+- Weather Observation Station 10
+- Weather Observation Station 11
+- Weather Observation Station 12
+
+
+
+## 2-5. Interview Preparation Kit
+
+<hr>
+
+### Warm-up Challenges
+
+- 
+
+### Arrays
+
+- 
+
+### Dictionaries and Hashmaps
+
+- 
+
+
+
+## 2-6. Problem Solving
+
+<hr>
+
 
 - Forming a Magic Square
 - Picking Numbers
