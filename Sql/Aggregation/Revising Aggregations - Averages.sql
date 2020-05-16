@@ -1,3 +1,0 @@
-SELECT AVG(POPULATION)
-FROM city
-WHERE DISTRICT = 'California';

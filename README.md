@@ -9,7 +9,7 @@
 - Learn to code in 30 days
 - 10 Days of Statistics
 - 10 Days of Javascript
-- Sql
+- SQL (x)
 - Interview Preparation Kit
 - Problem Solving
 
@@ -118,85 +118,10 @@
 
 
 
-## 2-4. Sql
+## 2-4. Sql (x)
 
 <hr>
-
-### Advanced Join
-
-- 15 Days of Learning SQL
-- Interviews
-- Placements
-- SQL Project Planning
-- Symmetric Pairs
-
-### Advanced Select
-
-- Binary Tree Nodes
-- New Companies
-- Occupations
-- The PADS
-- Type of Triangle
-
-### Aggregation
-
-- Average Population
-- Japan Population
-- Population Density Difference
-- Revising Aggregations - Averages
-- Revising Aggregations - The Count Function
-- Revising Aggregations - The Sum Function
-- The Blunder
-- Top Earners
-- Weather Observation Station 2
-- Weather Observation Station 13
-- Weather Observation Station 14
-- Weather Observation Station 15
-- Weather Observation Station 16
-- Weather Observation Station 17
-- Weather Observation Station 18
-- Weather Observation Station 19
-- Weather Observation Station 20
-
-### Alternative Queries
-
-- Draw The Triangle 1
-- Draw The Triangle 2
-- Print Prime Numbers
-
-### Basic Join
-
-- African Cities
-- Asian Population
-- Average Population of Each Continent
-- Challenges
-- Contest Leaderboard
-- Ollivander's Inventory
-- The Report
-- Top Competitors
-
-### Basic Select
-
-- Employee Names
-- Employee Salaries
-- Higher Than 75 Marks
-- Japanese Cities' Attributes
-- Japanese Cities' Names
-- Revising the Select Query I
-- Revising the Select Query II
-- Select All
-- Select By ID
-- Weather Observation Station 1
-- Weather Observation Station 3
-- Weather Observation Station 4
-- Weather Observation Station 5
-- Weather Observation Station 6
-- Weather Observation Station 7
-- Weather Observation Station 8
-- Weather Observation Station 9
-- Weather Observation Station 10
-- Weather Observation Station 11
-- Weather Observation Station 12
+- MySQL
 
 
 
