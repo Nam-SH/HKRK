@@ -1,25 +1,43 @@
-def countTriplets(arr, r):
-    from collections import defaultdict
+def merge(arr, left, mid, right):
+    i = left
+    j = mid + 1
+    k = left
 
-    m2 = defaultdict(int)
-    m3 = defaultdict(int)
+    while i <= mid and j <= right:
+        if arr[i] <= arr[j]:
+            sorted_arr[k] = arr[i]
+            i += 1
+            k += 1
+        else:
+            sorted_arr[k] = arr[j]
+            j += 1
+            k += 1
 
-    total = 0
-    for val in arr:
-        if val in m3:
-            total += m3[val]
-        if val in m2:
-            m3[val * r] += m2[val]
+    if i > mid:
+        for l in range(j, right + 1):
+            sorted_arr[k] = arr[l]
+            k += 1
+    else:
+        for l in range(i, mid + 1):
+            sorted_arr[k] = arr[l]
+            k += 1
 
-        m2[val * r] += 1
-    print(m2)
-    print(m3)
-    return total
+    for l in range(left, right + 1):
+        arr[l] = sorted_arr[l]
 
 
-arr = "1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"
+def mergeSort(arr, left, right):
+    if left < right:
+        mid = (left + right) // 2
+        mergeSort(arr, left, mid)
+        mergeSort(arr, mid + 1, right)
+        merge(arr, left, mid, right)
 
-arr = list(map(int, arr.split()))
-r = 1
 
-print(countTriplets(arr, r))
+n = 9
+arr = [2, 1, 3, 3, 1, 2, 5, 4, 1]
+
+sorted_arr = [0] * n
+mergeSort(arr, 0, n - 1)
+
+print(sorted_arr)
