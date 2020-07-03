@@ -7,49 +7,43 @@ import re
 import sys
 
 
-# Complete the roadsAndLibraries function below.
-def dfs(arr, idx, visit):
-    
-    if visit[idx]:
-        return 0
-
-    visit[idx] = 1
-    cnt = 1
-
-    for v in arr[idx]:
-        cnt += dfs(arr, v, visit)
-    return cnt
-
-
-def roadsAndLibraries(n, c_lib, c_road, cities):
-
-    arr = [[] for _ in range(n + 1)]
-    visit = [0] * (n + 1)
-
-    for u, v in cities:
-        arr[u] += [v]
-        arr[v] += [u]
-
-    cost = 0
-    for i in range(1, n + 1):
-        cnt = dfs(arr, i, visit)
-        if cnt:
-            cost += c_lib + (cnt - 1) * min(c_lib, c_road)
-    return cost
+# Complete the minTime function below.
+# def minTime(roads, machines):
+#     arr = [[] for _ in range(n)]
+#     for i, j, k in roads:
+#         arr[i] += [(j, k)]
+#         arr[j] += [(i, k)]
+#
+#     visit = [0] * n
+#     ans = []
+#     for val in machines:
+#         for nxt, weight in arr[val]:
+#             if visit[nxt]: continue
+#             visit[nxt] = 1
+#             ans += [weight]
+#     ans.sort()
+#     return sum(ans[:2])
 
 
-q = 1
-for q_itr in range(q):
-    n = 3
+n = 10
+k = 10
 
-    m = 3
+# roads = [[2, 1, 8], [1, 0, 5], [2, 4, 5], [1, 3, 4]]
+# machines = [2, 4, 0]
 
-    c_lib = 2
+roads = [
+    [4, 6, 4],
+    [6, 5, 4],
+    [6, 1, 9],
+    [5, 2, 5],
+    [6, 7, 4],
+    [1, 8, 3],
+    [6, 0, 9],
+    [8, 9, 10],
+    [5, 3, 7]
+]
+machines = [1, 2, 4, 9, 0, 7, 5, 3, 6, 8]
 
-    c_road = 1
+result = minTime(roads, machines)
 
-    cities = [[1, 2], [3, 1], [2, 3]]
-
-    result = roadsAndLibraries(n, c_lib, c_road, cities)
-
-    print(result)
+print(result)
