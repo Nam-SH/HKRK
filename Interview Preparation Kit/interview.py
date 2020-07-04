@@ -1,49 +1,68 @@
-#!/bin/python3
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
+        self.level = None
 
-import math
-import os
-import random
-import re
-import sys
-
-
-# Complete the minTime function below.
-# def minTime(roads, machines):
-#     arr = [[] for _ in range(n)]
-#     for i, j, k in roads:
-#         arr[i] += [(j, k)]
-#         arr[j] += [(i, k)]
-#
-#     visit = [0] * n
-#     ans = []
-#     for val in machines:
-#         for nxt, weight in arr[val]:
-#             if visit[nxt]: continue
-#             visit[nxt] = 1
-#             ans += [weight]
-#     ans.sort()
-#     return sum(ans[:2])
+    def __str__(self):
+        return str(self.data)
 
 
-n = 10
-k = 10
+class BinarySearchTree:
+    def __init__(self):
+        self.root = None
 
-# roads = [[2, 1, 8], [1, 0, 5], [2, 4, 5], [1, 3, 4]]
-# machines = [2, 4, 0]
+    def create(self, val):
+        if self.root == None:
+            self.root = Node(val)
+        else:
+            current = self.root
 
-roads = [
-    [4, 6, 4],
-    [6, 5, 4],
-    [6, 1, 9],
-    [5, 2, 5],
-    [6, 7, 4],
-    [1, 8, 3],
-    [6, 0, 9],
-    [8, 9, 10],
-    [5, 3, 7]
-]
-machines = [1, 2, 4, 9, 0, 7, 5, 3, 6, 8]
+            while True:
+                if val < current.data:
+                    if current.left:
+                        current = current.left
+                    else:
+                        current.left = Node(val)
+                        break
+                elif val > current.data:
+                    if current.right:
+                        current = current.right
+                    else:
+                        current.right = Node(val)
+                        break
+                else:
+                    break
 
-result = minTime(roads, machines)
 
-print(result)
+def checkBST(root):
+    return (find(root, [-1]))
+
+
+def find(root, prev):
+    result = True
+
+    if root.left:
+        result = find(root.left, prev)
+
+    if prev[0] >= root.data:
+        return False
+
+    prev[0] = root.data
+    if root.right:
+        result &= find(root.right, prev)
+
+    return result
+
+
+tree = BinarySearchTree()
+t = 6
+
+arr = [1, 2, 4, 3, 5, 6, 7]
+for i in range(t):
+    tree.create(arr[i])
+
+ans = checkBST(tree.root)
+
+print(ans)
