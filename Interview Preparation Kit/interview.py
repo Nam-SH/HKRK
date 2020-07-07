@@ -5,75 +5,64 @@ import os
 import random
 import re
 import sys
-
-class DoublyLinkedListNode:
-    def __init__(self, node_data):
-        self.data = node_data
-        self.next = None
-        self.prev = None
-
-class DoublyLinkedList:
-    def __init__(self):
-        self.head = None
-        self.tail = None
-
-    def insert_node(self, node_data):
-        node = DoublyLinkedListNode(node_data)
-
-        if not self.head:
-            self.head = node
-        else:
-            self.tail.next = node
-            node.prev = self.tail
+from copy import deepcopy
 
 
-        self.tail = node
+def checkWords(crossword, k, i, j, direct):
 
-def print_doubly_linked_list(node, sep):
-    while node:
-        print(str(node.data), end=" ")
+    if k == len(words):
+        return answer.append(crossword)
 
-        node = node.next
+    if words[k] == ';':
+        return findEmpty(crossword, k + 1)
+
+    if not (0 <= i < 10 > j >= 0) or crossword[i][j] == "+":
+        return
+
+    if crossword[i][j] != '-' and crossword[i][j] != words[k]:
+        return
+
+    copy_crossword = deepcopy(crossword)
+    copy_crossword[i][j] = words[k]
+
+    if direct == 1:
+        checkWords(copy_crossword, k + 1, i, j + 1, 1)
+    elif direct == 2:
+        checkWords(copy_crossword, k + 1, i + 1, j, 2)
 
 
-# Complete the reverse function below.
+def findEmpty(crossword, k):
+    for i in range(10):
+        for j in range(10):
+            if crossword[i][j] != '+':
+                checkWords(crossword, k, i, j, 1)
+                checkWords(crossword, k, i, j, 2)
 
-#
-# For your reference:
-#
-# DoublyLinkedListNode:
-#     int data
-#     DoublyLinkedListNode next
-#     DoublyLinkedListNode prev
-#
-#
-def reverse(head):
-    if not head:
-        return head
 
-    prev = None
-    curr = head
-    while curr:
-        nxt = curr.next
-        curr.prev = nxt
-        curr.next = prev
-        prev = curr
-        curr = nxt
+def crosswordPuzzle(crossword, words):
+    global answer
 
-    return prev
+    crossword = [list(s) for s in crossword]
 
-t = 1
+    answer = []
+    findEmpty(crossword, 0)
+    return ["".join(s) for s in answer[0]]
 
-for t_itr in range(t):
-    llist_count = 4
 
-    llist = DoublyLinkedList()
+crossword = [
+    "XXXXXX-XXX",
+    "XX------XX",
+    "XXXXXX-XXX",
+    "XXXXXX-XXX",
+    "XXX------X",
+    "XXXXXX-X-X",
+    "XXXXXX-X-X",
+    "XXXXXXXX-X",
+    "XXXXXXXX-X",
+    "XXXXXXXX-X",
+]
 
-    data = [1, 2, 3, 4]
-    for _ in range(llist_count):
-        llist_item = data[_]
-        llist.insert_node(llist_item)
+words = "ALMATY;PANAMA;ICELAND;MEXICO"
 
-    llist1 = reverse(llist.head)
-
-    print_doubly_linked_list(llist1, ' ')
+result = crosswordPuzzle(crossword, words)
+print(('\n'.join(result)))
