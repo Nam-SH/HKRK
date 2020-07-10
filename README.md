@@ -129,24 +129,123 @@
 
 <hr>
 
-### Warm-up Challenges
+01_Warm-up Challenges (4/4 solved)
 
-- 
+- Counting Valleys
+- Jumping on the Clouds
+- Repeated String
+- Sock Merchant
 
-### Arrays
+02_Arrays (5/5 solved)
 
-- 
+- 2D Array - DS
+- Array Manipulation
+- Arrays_Left Rotation
+- Minimum Swaps 2
+- New Year Chaos
 
-### Dictionaries and Hashmaps
+03_Dictionaries and Hashmaps (5/5 solved)
 
-- 
+- Count Triplets
+- Frequency Queries
+- Hash Tables Ransom Note
+- Sherlock and Anagrams
+- Two Strings
+
+04_Sorting (5/5 solved)
+
+- Fraudulent Activity Notifications
+- Mark and Toys
+- Merge Sort Counting Inversions
+- merge_sort
+- Sorting Bubble Sort
+- Sorting Comparator
+
+05_String Manipulation (5/5 solved)
+
+- Alternating Characters
+- Common Child
+- Sherlock and the Valid String
+- Special String Again
+- Strings, Making Anagrams
+
+06_Greedy Algorithms (5/5 solved)
+
+- Greedy Florist
+- Luck Balance
+- Max Min
+- Minimum Absolute Difference in an Array
+- Reverse Shuffle Merge
+
+07_Search (7/7 solved)
+
+- Hash Tables, Ice Cream Parlor
+- Making Candies
+- Maximum Subarray Sum
+- Minimum Time Required
+- Pairs
+- Swap Nodes [Algo]
+- Triple sum
+
+08_Dynamic Programming (3/4 solved)
+
+- Abbreviation
+- Candies
+- Decibinary Numbers(x)
+- Max Array Sum
+
+09_Stacks and Queues (6/6 solved)
+
+- Balanced Brackets
+- Castle on the Grid
+- Largest Rectangle
+- Min Max Riddle
+- Poisonous Plants
+- Queues; A Tale of Two Stacks
+
+10_Graphs (5/5 solved)
+
+- BFS_Shortest Reach in a Graph
+- DFS_Connected Cell in a Grid
+- Find the nearest clone
+- Matrix
+- Roads and Libraries
+
+11_Trees (4/5 solved)
+
+- Balanced Forest (x)
+- Binary Search Tree_Lowest Common Ancestor
+- Trees_Is This a Binary Search Tree
+- Tree_Height of a Binary Tree
+- Tree_Huffman Decoding
+
+12_Linked Lists (5/5 solved)
+
+- Find Merge Point of Two Lists
+- Insert a node at a specific position in a linked list
+- Inserting a Node Into a Sorted Doubly Linked List
+- Linked Lists_Detect a Cycle
+- Reverse a doubly linked list
+
+13_Recursion and Backtracking (4/4 solved)
+
+- Crossword Puzzle
+- Recursion_Davis' Staircase
+- Recursion_Fibonacci Numbers
+- Recursive Digit Sum
+
+14_Miscellaneous (0/4 solved)
+
+- Flipping bits
+- Friend Circle Queries
+- Maximum Xor
+- Time Complexity_Primality
 
 
 
 ## 2-6. Problem Solving
 
 <hr>
-
 
 - Forming a Magic Square
 - Picking Numbers
