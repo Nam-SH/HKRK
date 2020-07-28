@@ -5,64 +5,42 @@ import os
 import random
 import re
 import sys
-from copy import deepcopy
 
 
-def checkWords(crossword, k, i, j, direct):
+# Complete the maxXor function below.
+def maxXor(arr, queries):
+    ans = []
+    trie = [[0, 0]]
+    k = len(bin(max(arr + queries))) - 2
 
-    if k == len(words):
-        return answer.append(crossword)
-
-    if words[k] == ';':
-        return findEmpty(crossword, k + 1)
-
-    if not (0 <= i < 10 > j >= 0) or crossword[i][j] == "+":
-        return
-
-    if crossword[i][j] != '-' and crossword[i][j] != words[k]:
-        return
-
-    copy_crossword = deepcopy(crossword)
-    copy_crossword[i][j] = words[k]
-
-    if direct == 1:
-        checkWords(copy_crossword, k + 1, i, j + 1, 1)
-    elif direct == 2:
-        checkWords(copy_crossword, k + 1, i + 1, j, 2)
-
-
-def findEmpty(crossword, k):
-    for i in range(10):
-        for j in range(10):
-            if crossword[i][j] != '+':
-                checkWords(crossword, k, i, j, 1)
-                checkWords(crossword, k, i, j, 2)
+    print(['{:b}'.format(x) for x in arr])
+    for number in ['{:b}'.format(x).zfill(k) for x in arr]:
+        node = trie[0]
+        for ch in number:
+            if node[int(ch)] == 0:
+                trie.append([0, 0])
+                node[int(ch)] = len(trie) - 1
+            node = trie[node[int(ch)]]
+    for n in queries:
+        node = trie[0]
+        res = ''
+        for ch in '{:b}'.format(n).zfill(k):
+            neg = int(ch) ^ 1
+            if node[neg] == 0:
+                neg = int(ch)
+            res += str(neg)
+            node = trie[node[neg]]
+        ans.append(int(res, 2) ^ n)
+    return ans
 
 
-def crosswordPuzzle(crossword, words):
-    global answer
+n = 4
 
-    crossword = [list(s) for s in crossword]
+arr = [1, 3, 5, 7]
 
-    answer = []
-    findEmpty(crossword, 0)
-    return ["".join(s) for s in answer[0]]
+m = 2
+queries = [17, 6]
 
+result = maxXor(arr, queries)
 
-crossword = [
-    "XXXXXX-XXX",
-    "XX------XX",
-    "XXXXXX-XXX",
-    "XXXXXX-XXX",
-    "XXX------X",
-    "XXXXXX-X-X",
-    "XXXXXX-X-X",
-    "XXXXXXXX-X",
-    "XXXXXXXX-X",
-    "XXXXXXXX-X",
-]
-
-words = "ALMATY;PANAMA;ICELAND;MEXICO"
-
-result = crosswordPuzzle(crossword, words)
-print(('\n'.join(result)))
+print(result)

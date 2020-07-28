@@ -125,7 +125,7 @@
 
 
 
-## 2-5. Interview Preparation Kit
+## 2-5. Interview Preparation Kit  (66/69 challenges solved)
 
 <hr>
 
@@ -234,11 +234,11 @@
 - Recursion_Fibonacci Numbers
 - Recursive Digit Sum
 
-14_Miscellaneous (0/4 solved)
+14_Miscellaneous (3/4 solved)
 
 - Flipping bits
 - Friend Circle Queries
-- Maximum Xor
+- Maximum XOR (x)
 - Time Complexity_Primality
 
 
